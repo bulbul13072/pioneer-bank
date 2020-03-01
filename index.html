@@ -85,8 +85,12 @@
             
             const withNumber = getInputAmount("wd-amount");            
             updateSpanText("wd-amt", withNumber);
+            updateSpanText("current-dep", -1 * withNumber);
             document.getElementById("wd-amount").value = "";
         })
+
+        //functions
+        
         function getInputAmount(id){
             const buttonValue = document.getElementById(id).value;
             const valueNumber = parseFloat(buttonValue);
